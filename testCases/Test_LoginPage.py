@@ -39,6 +39,8 @@ class Test_LoginPage:
             print("Not displayed")
 
         time.sleep(4)
+        self.driver.quit()
+
 
     def test_IncorrectUsername(self,setUp):
         self.driver = setUp
@@ -56,6 +58,7 @@ class Test_LoginPage:
 
         if errorMsg.text == "Your username is invalid!":
             print("This is error msg")
+        self.driver.quit()
 
     def test_IncorrectPassword(self,setUp):
         self.driver = setUp
@@ -73,3 +76,4 @@ class Test_LoginPage:
 
         if errorMsg.text == "Your password is invalid!":
             print("This is error msg")
+        self.driver.quit()
